@@ -15,5 +15,11 @@
     <string name="e_mail">E-mail</string>
     <string name="date_of_birth">Date of Birth</string>
 
+    <string name="enter_username">Enter Your username</string>
+    <string name="enter_password">Enter Your password</string>
+    <string name="reenter_password">Reenter Your password</string>
+    <string name="enter_email">Add Your e-mail</string>
+    <string name="enter_birth">Add Your Date of Birth</string>
+
 
 </resources>
