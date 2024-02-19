@@ -16,12 +16,12 @@ class MainMenuFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main_menu, container, false)
 
         // Set click listeners for the buttons
-        view.findViewById<Button>(R.id.login_button).setOnClickListener {
+        view.findViewById<Button>(R.id.loginButton).setOnClickListener {
             // Navigate to the LoginFragment
             (activity as MainActivity).showLoginFragment()
         }
 
-        view.findViewById<Button>(R.id.register_button).setOnClickListener {
+        view.findViewById<Button>(R.id.registerButton).setOnClickListener {
             // Navigate to the RegisterFragment
             (activity as MainActivity).showRegisterFragment()
         }
