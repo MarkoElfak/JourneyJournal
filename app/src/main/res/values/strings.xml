@@ -21,5 +21,14 @@
     <string name="enter_email">Add Your e-mail</string>
     <string name="enter_birth">Add Your Date of Birth</string>
 
+    // Profile
+
+    <string name="avatar">Avatar</string>
+    <string name="profile_username">Marko Ilic</string>
+    <string name="travel_points">My Travel points:</string>
+    <string name="points_count">333 *</string>
+    <string name="star">star</string>
+    <string name="my_travel_history">My Travel History:</string>
+
 
 </resources>

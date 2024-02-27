@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/avatar" />
 
     <TextView
         android:id="@+id/textUsername"
@@ -25,7 +26,7 @@
         android:layout_marginTop="56dp"
         android:gravity="center"
         android:textSize="20sp"
-        android:text="TextView"
+        android:text="@string/profile_username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toEndOf="@+id/imageProfile"
@@ -33,11 +34,11 @@
 
     <TextView
         android:id="@+id/textTravelPoints"
-        android:layout_width="166dp"
-        android:layout_height="26dp"
+        android:layout_width="291dp"
+        android:layout_height="78dp"
         android:gravity="center"
+        android:text="@string/travel_points"
         android:textSize="25sp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -52,7 +53,7 @@
         android:layout_marginTop="68dp"
         android:gravity="center"
         android:textSize="17sp"
-        android:text="TextView"
+        android:text="@string/points_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTravelPoints" />
@@ -66,33 +67,44 @@
         app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textTravelPoints"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launcher"
+        android:contentDescription="@string/star" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="216dp"
-        android:layout_height="45dp"
+        android:layout_width="293dp"
+        android:layout_height="73dp"
         android:layout_marginTop="68dp"
         android:gravity="center"
+        android:text="@string/my_travel_history"
         android:textSize="30sp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Dynamic elements will be added here programmatically -->
+            <!-- Added so it doesn't throw error -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"/>
+        </LinearLayout>
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
