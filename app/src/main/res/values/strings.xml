@@ -5,4 +5,10 @@
     <string name="welcome_label">Welcome to Journey Journal</string>
     <string name="login_label">Login</string>
     <string name="register_label">Register</string>
+
+    <!--  Info Screen  -->
+    <string name="about_label">About Journey Journal</string>
+    <string name="about_description">Journey Journal is application for tracking and menagging persons travel history, as well as users friends. You can track your progress, collect start and share your travel experience!</string>
+    <string name="star_info_label">- Represents monument on the map</string>
+    <string name="pin_info_label">- Marks Your current location</string>
 </resources>
