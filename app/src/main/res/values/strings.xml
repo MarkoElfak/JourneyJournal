@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JourneyJournal</string>
+
+    <!--  Welcome Screen  -->
+    <string name="welcome_label">Welcome to Journey Journal</string>
+    <string name="login_label">Login</string>
+    <string name="register_label">Register</string>
 </resources>
