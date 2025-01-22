@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "324178270977",
+    "project_id": "journeyjournal-9eeff",
+    "storage_bucket": "journeyjournal-9eeff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324178270977:android:bda249e3e8e929d2b11900",
+        "android_client_info": {
+          "package_name": "com.elfak.journeyjournal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArlvZhT8WMRGN6a37F_pSrasMgGaJOSN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

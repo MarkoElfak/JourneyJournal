@@ -24,6 +24,9 @@ fun NavGraph(
                 navigateToWelcomeScreen = {
                     navController.navigate(Screens.WelcomeScreen.route)
                 },
+                navigateToLoginScreen = {
+                    navController.navigate(Screens.LoginScreen.route)
+                },
                 navigateToMainScreen = {
                     navController.navigate(Screens.MainScreen.route)
                 }
