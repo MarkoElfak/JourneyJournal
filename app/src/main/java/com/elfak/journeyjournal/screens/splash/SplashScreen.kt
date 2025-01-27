@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import com.elfak.journeyjournal.R
 import com.elfak.journeyjournal.data.local.PrefUtility
 import kotlinx.coroutines.delay
@@ -44,4 +45,14 @@ fun SplashScreen(
             contentDescription = null,
         )
     }
+}
+
+@Preview
+@Composable
+private fun SplashScreenPreview() {
+    SplashScreen(
+        navigateToWelcomeScreen = {},
+        navigateToLoginScreen = {},
+        navigateToMainScreen = {}
+    )
 }

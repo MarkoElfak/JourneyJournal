@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.elfak.journeyjournal.screens.InfoScreen
+import com.elfak.journeyjournal.screens.info.InfoScreen
 import com.elfak.journeyjournal.screens.forgot_password.ForgotPasswordScreen
 import com.elfak.journeyjournal.screens.login.LoginScreen
 import com.elfak.journeyjournal.screens.main.MainScreen
