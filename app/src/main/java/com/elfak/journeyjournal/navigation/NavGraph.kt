@@ -54,6 +54,9 @@ fun NavGraph(
                 navigateToForgotPasswordScreen = {
                     navController.navigate(Screens.ForgotPasswordScreen.route)
                 },
+                navigateToRegisterScreen = {
+                    navController.navigate(Screens.RegisterScreen.route)
+                },
                 navigateToMainScreen = {
                     navController.navigate(Screens.MainScreen.route)
                 }

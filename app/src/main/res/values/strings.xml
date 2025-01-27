@@ -11,4 +11,13 @@
     <string name="about_description">Journey Journal is application for tracking and menagging persons travel history, as well as users friends. You can track your progress, collect start and share your travel experience!</string>
     <string name="star_info_label">- Represents monument on the map</string>
     <string name="pin_info_label">- Marks Your current location</string>
+
+    <!--  Login Screen  -->
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="forgot_password_label">Forgot the password?</string>
+    <string name="dont_have_account_label">Don\'t have an account?</string>
+    <string name="sign_up_label">Sign Up</string>
+    <string name="email_password_required_label">Email and password are required fields!</string>
+    <string name="login_successfully_label">Login Successfully</string>
 </resources>

@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.elfak.journeyjournal.R
 import com.elfak.journeyjournal.ui_components.buttons.PrimaryButton
+import com.elfak.journeyjournal.ui_components.images.Logo
 import com.elfak.journeyjournal.ui_components.texts.PrimaryText
 
 @Composable
@@ -58,10 +59,7 @@ fun WelcomeScreen(
             )
         }
         Spacer(modifier = Modifier.height(50.dp))
-        Image(
-            painter = painterResource(R.drawable.airplane),
-            contentDescription = null,
-        )
+        Logo()
         Spacer(modifier = Modifier.height(150.dp))
         PrimaryText(
             text = stringResource(R.string.welcome_label),
