@@ -22,8 +22,8 @@ class LoginViewModel : BaseViewModel() {
         }
 
         FirebaseWrapper.login(
-            email.value.trim(),
-            password.value.trim(),
+            email = email.value.trim(),
+            password = password.value.trim(),
             onSuccess = {
                 loginSuccessfulEvent.postValue(true)
             },
