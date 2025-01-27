@@ -28,4 +28,8 @@
     <string name="already_have_account_label">Already have an account?</string>
     <string name="all_field_required_label">All field are required!</string>
     <string name="passwords_dont_match_label">Passwords don\'t match!</string>
+    
+    <!--  Forgot Password Screen  -->
+    <string name="enter_email_label">Enter your email:</string>
+    <string name="send_label">Send</string>
 </resources>
