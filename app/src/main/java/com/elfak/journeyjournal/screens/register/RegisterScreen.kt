@@ -152,11 +152,23 @@ private fun setUpRegisterObservers(
     with(registerViewModel) {
         registerSuccessfulEvent.observe(context as LifecycleOwner) {
             if (it == true) {
+                registerViewModel.saveUser()
+            }
+        }
+
+        userSuccessfullySaveEvent.observe(context as LifecycleOwner) {
+            if (it == true) {
                 navigateToLoginScreen.invoke()
             }
         }
 
         registerUnsuccessfulEvent.observe(context as LifecycleOwner) {
+            if (it != null) {
+                context.showMsg(it)
+            }
+        }
+
+        errorEvent.observe(context as LifecycleOwner) {
             if (it != null) {
                 context.showMsg(it)
             }

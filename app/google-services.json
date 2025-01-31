@@ -1,26 +1,37 @@
 {
   "project_info": {
-    "project_number": "324178270977",
-    "project_id": "journeyjournal-9eeff",
-    "storage_bucket": "journeyjournal-9eeff.firebasestorage.app"
+    "project_number": "202004722026",
+    "firebase_url": "https://monuments-7e49d-default-rtdb.firebaseio.com",
+    "project_id": "monuments-7e49d",
+    "storage_bucket": "monuments-7e49d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:324178270977:android:bda249e3e8e929d2b11900",
+        "mobilesdk_app_id": "1:202004722026:android:988217781f70e13f0c7513",
         "android_client_info": {
           "package_name": "com.elfak.journeyjournal"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "202004722026-b75am2ficfihgsnfb03bccn6loiar2ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyArlvZhT8WMRGN6a37F_pSrasMgGaJOSN0"
+          "current_key": "AIzaSyATqAEs0Z5Eq4ZgUcc3WbiS-QzP8of7yQE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202004722026-b75am2ficfihgsnfb03bccn6loiar2ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
