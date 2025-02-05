@@ -29,11 +29,13 @@ import com.elfak.journeyjournal.R
 @Composable
 fun InputTextField(
     modifier: Modifier = Modifier,
-    label: String,
+    initValue: String? = null,
+    label: String? = null,
+    enabled: Boolean = true,
     isPassword: Boolean = false,
     onInputChange: (String) -> Unit
 ) {
-    var text by remember { mutableStateOf("") }
+    var text by remember { mutableStateOf(initValue ?: "") }
 
     Column(
         modifier = Modifier
@@ -43,18 +45,21 @@ fun InputTextField(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        Text(
-            text = label,
-            textAlign = TextAlign.Center,
-            style = TextStyle(
-                fontSize = 20.sp,
-                fontWeight = FontWeight(700),
-                fontFamily = FontFamily(Font(R.font.macondo))
+        if (label != null) {
+            Text(
+                text = label,
+                textAlign = TextAlign.Center,
+                style = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight(700),
+                    fontFamily = FontFamily(Font(R.font.macondo))
+                )
             )
-        )
+        }
         TextField(
             modifier = Modifier.fillMaxWidth(),
             value = text,
+            enabled = enabled,
             textStyle = TextStyle(
                 fontSize = 20.sp,
                 fontWeight = FontWeight(500),
@@ -65,7 +70,10 @@ fun InputTextField(
                 unfocusedTextColor = Color.Black,
                 cursorColor = Color.Black,
                 focusedIndicatorColor = Color.Black,
-                unfocusedIndicatorColor = Color.Black
+                unfocusedIndicatorColor = Color.Black,
+                disabledIndicatorColor = Color.Transparent,
+                disabledTextColor = Color.Black,
+                disabledContainerColor = Color.Transparent,
             ),
             visualTransformation = if (!isPassword) VisualTransformation.None else PasswordVisualTransformation(),
             onValueChange = {

@@ -32,4 +32,9 @@
     <!--  Forgot Password Screen  -->
     <string name="enter_email_label">Enter your email:</string>
     <string name="send_label">Send</string>
+
+    <!--  Main Screen  -->
+    <string name="edit_profile_label">Edit profile</string>
+    <string name="set_picture_label">Set your picture</string>
+    <string name="save_changes_label">Save changes</string>
 </resources>

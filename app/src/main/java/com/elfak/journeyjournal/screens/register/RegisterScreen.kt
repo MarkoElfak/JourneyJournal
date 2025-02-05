@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -42,6 +43,7 @@ fun RegisterScreen(
     navigateToLoginScreen: () -> Unit
 ) {
     val context = LocalContext.current
+    val focusManager = LocalFocusManager.current
 
     val registerViewModel = viewModel<RegisterViewModel>()
 
@@ -53,6 +55,13 @@ fun RegisterScreen(
             .background(Color.White)
             .padding(horizontal = 20.dp, vertical = 50.dp)
             .verticalScroll(rememberScrollState())
+            .clickable(
+                enabled = true,
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null
+            ) {
+                focusManager.clearFocus()
+            }
             .imePadding(),
         contentAlignment = Alignment.Center
     ) {
