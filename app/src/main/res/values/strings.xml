@@ -1,34 +1,3 @@
 <resources>
-    <string name="app_name">JourneyJournal</string>
-    <string name="action_settings">Settings</string>
-
-    // Main Activity
-    <string name="welcome_to_journey_journal">Welcome to JourneyJournal!</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
-    <string name="forgot_password">Forgot Your password?</string>
-
-    // Login / Register
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm password</string>
-    <string name="e_mail">E-mail</string>
-    <string name="date_of_birth">Date of Birth</string>
-
-    <string name="enter_username">Enter Your username</string>
-    <string name="enter_password">Enter Your password</string>
-    <string name="reenter_password">Reenter Your password</string>
-    <string name="enter_email">Add Your e-mail</string>
-    <string name="enter_birth">Add Your Date of Birth</string>
-
-    // Profile
-
-    <string name="avatar">Avatar</string>
-    <string name="profile_username">Marko Ilic</string>
-    <string name="travel_points">My Travel points:</string>
-    <string name="points_count">333 *</string>
-    <string name="star">star</string>
-    <string name="my_travel_history">My Travel History:</string>
-
-
+    <string name="app_name">Journey Journal</string>
 </resources>

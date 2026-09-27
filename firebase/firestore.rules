@@ -1,0 +1,60 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isSelf(userId) {
+      return signedIn() && request.auth.uid == userId;
+    }
+
+    // Profiles are public to signed-in users (leaderboard, authors, markers on the map),
+    // but every user may only write their own document.
+    match /users/{userId} {
+      allow read: if signedIn();
+      allow create, update: if isSelf(userId);
+      allow delete: if false;
+    }
+
+    match /places/{placeId} {
+      allow read: if signedIn();
+      allow create: if signedIn()
+                    && request.resource.data.authorId == request.auth.uid
+                    && request.resource.data.title is string
+                    && request.resource.data.title.size() > 0;
+
+      // The author may edit everything; anyone else may only move the interaction counters.
+      allow update: if signedIn() && (
+        resource.data.authorId == request.auth.uid ||
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'ratingSum', 'ratingCount', 'commentCount', 'visitCount', 'lastInteractionAt'
+        ])
+      );
+
+      allow delete: if signedIn() && resource.data.authorId == request.auth.uid;
+
+      // One rating per user; the document id is the user id.
+      match /ratings/{userId} {
+        allow read: if signedIn();
+        allow write: if isSelf(userId);
+      }
+
+      // One check-in per user.
+      match /visits/{userId} {
+        allow read: if signedIn();
+        allow create: if isSelf(userId);
+        allow update, delete: if false;
+      }
+
+      match /comments/{commentId} {
+        allow read: if signedIn();
+        allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
+        allow delete: if signedIn() && resource.data.userId == request.auth.uid;
+        allow update: if false;
+      }
+    }
+  }
+}

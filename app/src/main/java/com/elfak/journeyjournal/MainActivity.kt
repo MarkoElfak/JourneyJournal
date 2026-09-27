@@ -1,36 +1,40 @@
 package com.elfak.journeyjournal
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import com.elfak.journeyjournal.ui.navigation.AppRoot
+import com.elfak.journeyjournal.ui.theme.JourneyJournalTheme
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        if (savedInstanceState == null) {
-            // Display the initial fragment (e.g., a fragment with login/register options)
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, MainMenuFragment())
-                .commit()
+        enableEdgeToEdge()
+        setContent {
+            var pendingPlaceId by androidx.compose.runtime.remember {
+                mutableStateOf(intent?.getStringExtra(EXTRA_PLACE_ID))
+            }
+            JourneyJournalTheme {
+                AppRoot(
+                    pendingPlaceId = pendingPlaceId,
+                    onPlaceIdHandled = { pendingPlaceId = null },
+                )
+            }
         }
     }
 
-    // Method to navigate to the login fragment
-    fun showLoginFragment() {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, LoginFragment())
-            .addToBackStack(null)
-            .commit()
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
     }
 
-    // Method to navigate to the register fragment
-    fun showRegisterFragment() {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, RegisterFragment())
-            .addToBackStack(null)
-            .commit()
+    companion object {
+        const val EXTRA_PLACE_ID = "extra_place_id"
     }
-
 }
