@@ -1,40 +1,34 @@
 <resources>
     <string name="app_name">JourneyJournal</string>
+    <string name="action_settings">Settings</string>
 
-    <!--  Welcome Screen  -->
-    <string name="welcome_label">Welcome to Journey Journal</string>
-    <string name="login_label">Login</string>
-    <string name="register_label">Register</string>
+    // Main Activity
+    <string name="welcome_to_journey_journal">Welcome to JourneyJournal!</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Your password?</string>
 
-    <!--  Info Screen  -->
-    <string name="about_label">About Journey Journal</string>
-    <string name="about_description">Journey Journal is application for tracking and menagging persons travel history, as well as users friends. You can track your progress, collect start and share your travel experience!</string>
-    <string name="star_info_label">- Represents monument on the map</string>
-    <string name="pin_info_label">- Marks Your current location</string>
+    // Login / Register
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="date_of_birth">Date of Birth</string>
 
-    <!--  Login Screen  -->
-    <string name="email_label">Email</string>
-    <string name="password_label">Password</string>
-    <string name="forgot_password_label">Forgot the password?</string>
-    <string name="dont_have_account_label">Don\'t have an account?</string>
-    <string name="sign_up_label">Sign Up</string>
-    <string name="email_password_required_label">Email and password are required fields!</string>
-    <string name="login_successfully_label">Login Successfully</string>
-    
-    <!--  Register Screen  -->
-    <string name="username_label">Username</string>
-    <string name="confirm_password_label">Confirm password</string>
-    <string name="dob_label">Date of Birth</string>
-    <string name="already_have_account_label">Already have an account?</string>
-    <string name="all_field_required_label">All field are required!</string>
-    <string name="passwords_dont_match_label">Passwords don\'t match!</string>
-    
-    <!--  Forgot Password Screen  -->
-    <string name="enter_email_label">Enter your email:</string>
-    <string name="send_label">Send</string>
+    <string name="enter_username">Enter Your username</string>
+    <string name="enter_password">Enter Your password</string>
+    <string name="reenter_password">Reenter Your password</string>
+    <string name="enter_email">Add Your e-mail</string>
+    <string name="enter_birth">Add Your Date of Birth</string>
 
-    <!--  Main Screen  -->
-    <string name="edit_profile_label">Edit profile</string>
-    <string name="set_picture_label">Set your picture</string>
-    <string name="save_changes_label">Save changes</string>
+    // Profile
+
+    <string name="avatar">Avatar</string>
+    <string name="profile_username">Marko Ilic</string>
+    <string name="travel_points">My Travel points:</string>
+    <string name="points_count">333 *</string>
+    <string name="star">star</string>
+    <string name="my_travel_history">My Travel History:</string>
+
+
 </resources>
