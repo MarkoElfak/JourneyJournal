@@ -1,20 +1,36 @@
 package com.elfak.journeyjournal
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.navigation.compose.rememberNavController
-import com.elfak.journeyjournal.navigation.NavGraph
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
 
-        setContent {
-            val navController = rememberNavController()
-            NavGraph(navController)
+        if (savedInstanceState == null) {
+            // Display the initial fragment (e.g., a fragment with login/register options)
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, MainMenuFragment())
+                .commit()
         }
     }
+
+    // Method to navigate to the login fragment
+    fun showLoginFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, LoginFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    // Method to navigate to the register fragment
+    fun showRegisterFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, RegisterFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
 }
